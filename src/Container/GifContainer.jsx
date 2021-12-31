@@ -11,7 +11,7 @@ export const GifContainer = ({ categoria }) => {
       <h3>{categoria}</h3>
 
       {/* {loading ? <p>Cargando... </p> : null } */}
-      {loading && <p> Cargando </p>}
+      {loading && <p className="animate__animated animate__flash"> Cargando </p>}
       <div className="card__container">
         {images.map((g) => {
           return <GifItem img={g.url} title={g.title} key={g.id}></GifItem>;
