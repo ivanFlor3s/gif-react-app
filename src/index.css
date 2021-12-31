@@ -10,3 +10,27 @@ body{
   border-bottom: solid 2px rgb(69, 66, 240);
 }
 
+.card{
+  align-content: center;
+  border: 1px solid rgb(69, 66, 240);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.card__footer{
+  padding: 10px;
+  background-color: rgb(69, 66, 240);
+  color:whitesmoke;
+  border-radius: 0 0 10px 10px;
+}
+.card__img{
+  max-height: 200px;
+} 
+
+.card__container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

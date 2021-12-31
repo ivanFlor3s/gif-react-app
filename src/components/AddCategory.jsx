@@ -18,7 +18,7 @@ export const AddCategory = ({addGifHandler}) => {
           }
           else if(!categorias.includes(inputValue)){
             setInputValue('')
-            return [...categorias,inputValue]
+            return [inputValue, ...categorias]
           }
           else{
               console.error('Ya se agrego la categoria', inputValue)
