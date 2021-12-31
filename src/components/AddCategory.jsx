@@ -1,18 +1,32 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types'
 
-export const AddCategory = () => {
+
+export const AddCategory = ({addGifHandler}) => {
   const [inputValue, setInputValue] = useState("");
 
   const changeHandler = (e) => {
     setInputValue(e.target.value);
-    console.log('cambio valor',e.target.value)
   };
 
   const handleSubmit = (e) => {
       e.preventDefault()
-      console.log('Submit hecho')
+
+      addGifHandler((categorias = []) => {
+          if(inputValue.trim().length < 3){
+              return [...categorias]
+          }
+          else if(!categorias.includes(inputValue)){
+            setInputValue('')
+            return [...categorias,inputValue]
+          }
+          else{
+              console.error('Ya se agrego la categoria', inputValue)
+              return [...categorias]
+          }
+        })
   }
-  
+
   return (
     <form onSubmit={handleSubmit}>
       <label>Nueva categoria </label>
@@ -26,3 +40,7 @@ export const AddCategory = () => {
     </form>
   );
 };
+
+AddCategory.propTypes = {
+    addGifHandler: PropTypes.func.isRequired
+}
