@@ -3,3 +3,10 @@ body{
   font-size: 1.8rem;
   padding: 40px;
 }
+
+.inputCategoria{
+  outline: none;
+  border: none;
+  border-bottom: solid 2px rgb(69, 66, 240);
+}
+
