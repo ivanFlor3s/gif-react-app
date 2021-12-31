@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { GifItem } from "../components/GifItem";
-import { getGifs } from "../helpers/getGifs";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const GifContainer = ({ categoria }) => {
-  const [gifs, setGifs] = useState([]);
+  //Renombro data
+  const { data: images, loading } = useFetchGifs(categoria);
 
-  useEffect(() => {
-    getGifs(categoria)
-        .then( setGifs )
-  }, [categoria]);
-
-  
   return (
     <>
       <h3>{categoria}</h3>
+
+      {/* {loading ? <p>Cargando... </p> : null } */}
+      {loading && <p> Cargando </p>}
       <div className="card__container">
-        {gifs.map((g) => {
+        {images.map((g) => {
           return <GifItem img={g.url} title={g.title} key={g.id}></GifItem>;
         })}
       </div>
