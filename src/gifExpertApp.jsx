@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export const GifExpertApp = () => {
 
-    const categorias = ['HxH', 'DBZ', 'One Piece']
+    const [categorias, setCategorias] = useState( ['HxH', 'DBZ', 'One Piece'])
+    const handleAdd = ()=>{
+        //setCategorias([...categorias, 'Boku no epicardo'])
+        setCategorias((categs)=>[...categs,'Boku no Hero'])
+    }
     
     return (
         <>
@@ -17,6 +21,7 @@ export const GifExpertApp = () => {
                 }
                 
             </ol>
+            <button type='button' onClick={handleAdd}> + Agregar </button>
         </>
     )
 }
