@@ -21,3 +21,7 @@ export const GifContainer = ({ categoria }) => {
     </>
   );
 };
+
+GifContainer.propTypes = {
+  categoria: PropTypes.string.isRequired
+}

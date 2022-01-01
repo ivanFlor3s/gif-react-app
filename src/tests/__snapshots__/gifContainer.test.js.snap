@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test en gif container component Debe demostrar items cuando se cargan imagenes con nuestro UseFetchGifs 1`] = `
+<Fragment>
+  <h3>
+    Nueva categoria
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+  >
+     Cargando 
+  </p>
+  <div
+    className="card__container"
+  >
+    <GifItem
+      img="https://localhost/asd.jpg"
+      key="abc"
+      title="qti"
+    />
+    <GifItem
+      img="https://localhost/cba.jpg"
+      key="cba"
+      title="qtiCba"
+    />
+  </div>
+</Fragment>
+`;
+
 exports[`Test en gif container component Pruebo componente Ok 1`] = `
 <Fragment>
   <h3>
