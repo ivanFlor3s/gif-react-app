@@ -11,7 +11,7 @@ export const AddCategory = ({addGifHandler}) => {
 
   const handleSubmit = (e) => {
       e.preventDefault()
-
+      console.log('manejo submit',inputValue )
       addGifHandler((categorias = []) => {
           if(inputValue.trim().length < 3){
               return [...categorias]
