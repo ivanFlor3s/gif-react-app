@@ -5,11 +5,6 @@ exports[`Test en gif container component Debe demostrar items cuando se cargan i
   <h3>
     Nueva categoria
   </h3>
-  <p
-    className="animate__animated animate__flash"
-  >
-     Cargando 
-  </p>
   <div
     className="card__container"
   >

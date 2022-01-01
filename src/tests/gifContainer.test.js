@@ -17,18 +17,20 @@ describe("Test en gif container component", () => {
   });
 
   test("Debe demostrar items cuando se cargan imagenes con nuestro UseFetchGifs", () => {
+    const gifsResult = [
+        {id: 'abc', url:'https://localhost/asd.jpg', title:'qti'},
+        {id: 'cba', url:'https://localhost/cba.jpg', title:'qtiCba'}
+    ]
     useFetchGifs.mockReturnValue({
-      data: [
-          {id: 'abc', url:'https://localhost/asd.jpg', title:'qti'},
-          {id: 'cba', url:'https://localhost/cba.jpg', title:'qtiCba'}
-      ],
-      loading: true,
+      data: gifsResult,
+      loading: false,
     });
     const wrapper = shallow(
       <GifContainer categoria="Nueva categoria"></GifContainer>
     );
 
     expect(wrapper).toMatchSnapshot();
-
+    expect(wrapper.find('p').exists()).toBe(false)
+    expect(wrapper.find('GifItem').length).toBe(gifsResult.length)
   });
 });
