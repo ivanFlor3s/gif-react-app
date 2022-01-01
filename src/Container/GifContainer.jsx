@@ -1,6 +1,7 @@
 import React from "react";
 import { GifItem } from "../components/GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
+import PropTypes from 'prop-types'
 
 export const GifContainer = ({ categoria }) => {
   //Renombro data

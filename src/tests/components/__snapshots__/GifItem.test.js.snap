@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifItem component Debe mostrar el componente correctamente 1`] = `
+<div
+  className="card animate__animated  animate__fadeInLeftBig"
+>
+  <div>
+    <img
+      alt="Mi titulo"
+      className="card__img"
+      src="https://esto+es+una+url.jpg"
+    />
+  </div>
+  <div
+    className="card__footer"
+  >
+    <h4>
+      Mi titulo
+    </h4>
+  </div>
+</div>
+`;
