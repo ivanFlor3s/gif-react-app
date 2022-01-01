@@ -24,4 +24,10 @@ describe('Pruebas en GifItem component', () => {
         //expect( imgInDoc.prop('src')).toBe(url)
         expect(imgInDoc.prop('alt')).toBe(title)
     })
+
+    test('Debe tener las clases de animaciones', () => {
+        const divDocument = wrapper.find('div').at(0)
+        console.log(divDocument.props())
+        expect(divDocument.prop('className').includes('animate__fadeInLeftBig')).toBe(true)
+    }) 
 })
