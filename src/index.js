@@ -5,6 +5,6 @@ import { GifExpertApp } from './gifExpertApp';
 import './index.css'
 
 ReactDOM.render(
-    <GifExpertApp/>,
+    <GifExpertApp categoryList={['HxH']}/>,
   document.getElementById('root')
 );

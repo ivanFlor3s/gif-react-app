@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import { AddCategory } from './components/AddCategory'
 import { GifContainer } from './Container/GifContainer'
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({categoryList = []}) => {
 
-    const [categorias, setCategorias] = useState( ['HxH'])
+    const [categorias, setCategorias] = useState(categoryList )
 
     // const handleAdd = ()=>{
     //     //setCategorias([...categorias, 'Boku no epicardo'])
